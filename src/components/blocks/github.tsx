@@ -1,3 +1,5 @@
+import { repoOwner } from '~/blog-config'
+
 import { Block } from '@/components/blocks/block'
 import { ExternalLink } from '@/components/external-link'
 
@@ -22,7 +24,7 @@ export const Github = () => (
     <ExternalLink
       className='dark:bg-surface-3'
       title='Github'
-      href='https://github.com/zhangyu1818'
+      href={`https://github.com/${repoOwner}`}
     />
   </Block>
 )
