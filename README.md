@@ -32,3 +32,5 @@ OPENAI_API_KEY=<optional>
 ### Summary
 
 If you need Open AI to generate your article summaries, delete `summary.json` in root folder and paste your `OPENAI_API_KEY` in `.env`.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzhangyu1818%2Fblog&env=GITHUB_TOKEN&envDescription=GitHub%20Token%20is%20used%20to%20fetch%20data%20from%20GitHub&envLink=https%3A%2F%2Fdocs.github.com%2Fen%2Fauthentication%2Fkeeping-your-account-and-data-secure%2Fmanaging-your-personal-access-tokens&demo-title=Personal%20Blog&demo-description=Personal%20Blog&demo-url=https%3A%2F%2Fzhangyu.dev)
