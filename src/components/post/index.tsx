@@ -21,7 +21,12 @@ export const Post = async (props: PostProps) => {
 
   const currentSummary = summaryJson[number]
 
-  if (!currentSummary && bodyText && process.env.NODE_ENV === 'development') {
+  if (
+    !currentSummary &&
+    bodyText &&
+    process.env.NODE_ENV === 'development' &&
+    process.env.OPENAI_API_KEY
+  ) {
     const result = await createSummary(bodyText)
     if (result) {
       const newSummaryJson = await getSummary()
