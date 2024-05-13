@@ -50,16 +50,18 @@ export const Pinned = async () => {
               </p>
               <p className='relative z-20 flex-1'>{item.description}</p>
               <div className='relative z-20 flex gap-5'>
-                <div className='flex items-center'>
-                  <i
-                    className='box-content inline-block h-2.5 w-2.5 rounded-full border border-[rgb(255,255,255,0.2)]'
-                    style={{
-                      background: language.color,
-                      color: language.color,
-                    }}
-                  />
-                  <span className='ml-1.5'>{language.name}</span>
-                </div>
+                {language && (
+                  <div className='flex items-center'>
+                    <i
+                      className='box-content inline-block h-2.5 w-2.5 rounded-full border border-[rgb(255,255,255,0.2)]'
+                      style={{
+                        background: language.color,
+                        color: language.color,
+                      }}
+                    />
+                    <span className='ml-1.5'>{language.name}</span>
+                  </div>
+                )}
                 {item.stargazerCount !== 0 && (
                   <div className='flex items-center'>
                     <IconStar className='size-4' />
