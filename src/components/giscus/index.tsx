@@ -3,6 +3,8 @@
 import Giscus from '@giscus/react'
 import { useDarkToggle } from 'dark-toggle/react'
 
+import { repoName, repoOwner } from '~/blog-config'
+
 interface GiscusScriptProps {
   number: number
 }
@@ -14,7 +16,7 @@ export function GiscusScript(props: GiscusScriptProps) {
   return (
     <div className='mt-32'>
       <Giscus
-        repo='zhangyu1818/blog'
+        repo={`${repoOwner}/${repoName}`}
         repoId='MDEwOlJlcG9zaXRvcnkzMjk0OTk1NjU='
         mapping='number'
         term={`${number}`}
