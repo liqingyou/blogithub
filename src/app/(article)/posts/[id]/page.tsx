@@ -4,6 +4,8 @@ import { IconHourglassHigh, IconHash } from '@tabler/icons-react'
 import dayjs from 'dayjs'
 import { TOC } from 'react-markdown-toc/server'
 
+import { repoName, repoOwner } from '~/blog-config'
+
 import { GiscusScript } from '@/components/giscus'
 import { Markdown } from '@/markdown'
 import { queryAllPosts, queryByNumber } from '@/service'
@@ -74,7 +76,7 @@ export default async function Page({ params }: PageProps) {
         </header>
         <article className='prose prose-slate max-w-none dark:prose-invert prose-code:break-words prose-pre:-ml-4 prose-pre:-mr-4 prose-img:-ml-4 prose-img:-mr-4 prose-img:rounded dark:prose-img:brightness-75 max-xl:col-start-2 md:prose-pre:-ml-8 md:prose-pre:-mr-8'>
           <Markdown source={body!} />
-          <GiscusScript number={number} />
+          <GiscusScript number={number} repo={`${repoOwner}/${repoName}`} />
         </article>
         <aside className='sticky top-32 ml-auto h-fit w-[22ch] max-xl:hidden'>
           <h2 className='mb-4 whitespace-nowrap text-lg font-semibold tracking-wider'>
