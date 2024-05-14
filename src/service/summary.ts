@@ -43,8 +43,12 @@ const cwd = process.cwd()
 const summaryFilePath = join(cwd, 'summary.json')
 
 export async function getSummary() {
-  const fileContent = await readFile(summaryFilePath, 'utf-8')
-  return JSON.parse(fileContent)
+  try {
+    const fileContent = await readFile(summaryFilePath, 'utf-8')
+    return JSON.parse(fileContent)
+  } catch {
+    return {}
+  }
 }
 
 export async function writeSummery(newSummery: unknown) {
