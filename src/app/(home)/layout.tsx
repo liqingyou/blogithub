@@ -3,6 +3,7 @@ import { Bio } from '@/components/blocks/bio'
 import { Font } from '@/components/blocks/font'
 import { Github } from '@/components/blocks/github'
 import { Juejin } from '@/components/blocks/juejin'
+import { Weather } from '@/components/blocks/weather'
 import { Pinned } from '@/components/blocks/pinned'
 import { Posts } from '@/components/blocks/posts'
 import { Resume } from '@/components/blocks/resume'
@@ -11,6 +12,7 @@ import { Tags } from '@/components/blocks/tags'
 import { ThemeToggle } from '@/components/blocks/theme-toggle'
 import { Grid } from '@/components/grid'
 import { Header } from '@/components/header'
+
 
 export default function Layout() {
   return (
@@ -28,6 +30,7 @@ export default function Layout() {
         <Posts />
         <Github />
         <Juejin />
+        <Weather />
       </Grid>
     </>
   )
