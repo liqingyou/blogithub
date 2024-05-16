@@ -13,7 +13,6 @@ import { ThemeToggle } from '@/components/blocks/theme-toggle'
 import { Grid } from '@/components/grid'
 import { Header } from '@/components/header'
 
-
 export default function Layout() {
   return (
     <>
