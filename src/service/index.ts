@@ -17,6 +17,16 @@ const client = new Client({
   owner: repoOwner,
 })
 
+export const querySvg = cache(async () => {
+  // 发送网络请求获取数据
+  const response = await fetch('http://43.128.58.74:9102/dy/video/svg')
+  if (!response.ok) {
+    throw new Error('Failed to fetch profile README')
+  }
+  const data = await response.json()
+  return data.svgPath
+})
+
 export const queryProfileREADME = cache(async () => {
   const [masterResult, mainResult] = await Promise.allSettled([
     graphql<RepositoryFile>(

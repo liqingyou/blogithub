@@ -1,27 +1,9 @@
-'use client'
-
-import React, { useEffect, useState } from 'react'
 import { Block } from '@/components/blocks/block'
 import { ExternalLink } from '@/components/external-link'
+import { querySvg } from '@/service'
 
-export const Weather = () => {
-  // 设置状态来存储 SVG 路径
-  const [svgPath, setSvgPath] = useState('')
-
-  // 使用 useEffect 发送网络请求
-  useEffect(() => {
-    // 发送网络请求
-    fetch('http://43.128.58.74:9102/dy/video/svg')
-      .then(response => response.json())
-      .then(data => {
-        // 根据请求结果设置 SVG 路径
-        setSvgPath(data.svgPath)
-      })
-      .catch(error => {
-        console.error('Error fetching SVG path:', error)
-      })
-  }, []) // 第二个参数 [] 确保只在组件加载时发送一次请求
-
+export const Weather = async () => {
+  const svgPath = await querySvg()
   return (
     <Block
       data-type='about'
