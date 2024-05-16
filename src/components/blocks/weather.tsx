@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Block } from '@/components/blocks/block';
 import { ExternalLink } from '@/components/external-link';
