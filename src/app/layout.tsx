@@ -39,27 +39,29 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'zhangyu.dev',
-    template: '%s | zhangyu.dev',
+    absolute: 'surfing.fish',
+    template: '%s | surfing.fish',
   },
   description:
-    'Dive into front-end development with a focus on React, cutting-edge frameworks, JavaScript, TypeScript, Swift, Animation and more',
+    'As a backend programmer, I excel in Java, Spring Boot, MongoDB, MySQL, Redis, RabbitMQ, Vue.js, and other technologies. I am passionate about coding and enthusiastic about learning and exploring new technologies.',
   keywords: [
-    'Front-end Development',
-    'React',
+    'As a backend programmer',
+    'Java',
     'JavaScript',
-    'TypeScript',
-    'CSS',
-    'Animation',
-    'Swift',
+    'Spring Boot',
+    'MongoDB',
+    'MySQL',
+    'Redis',
+    'RabbitMQ',
+    'Vue.js',
   ],
-  applicationName: 'zhangyu.dev',
+  applicationName: 'surfing.fish',
   authors: {
-    name: 'zhangyu1818',
-    url: 'https://github.com/zhangyu1818',
+    name: 'liqingyou',
+    url: 'https://github.com/liqingyou',
   },
-  creator: 'zhangyu1818',
-  publisher: 'zhangyu1818',
+  creator: 'liqingyou',
+  publisher: 'liqingyou',
   generator: 'Next.js',
   verification: {
     google: 'ULSANpODFw1TULe1QTOUFT8z8QXPVIA1MRTMQL7PAbw',
